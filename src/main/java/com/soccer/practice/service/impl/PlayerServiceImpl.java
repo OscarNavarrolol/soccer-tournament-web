@@ -2,29 +2,37 @@ package com.soccer.practice.service.impl;
 
 import com.soccer.practice.entities.Player;
 import com.soccer.practice.entities.Team;
+import com.soccer.practice.repository.PlayerRepository;
 import com.soccer.practice.service.PlayerService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class PlayerServiceImpl implements PlayerService {
+
+    @Autowired
+    private PlayerRepository playerRepository;
+
     @Override
     public List<Player> getAllPlayer() {
-        return null;
+        return playerRepository.findAll();
     }
 
     @Override
     public Player savePlayer(Player player) {
-        return null;
+        return playerRepository.save(player);
     }
 
     @Override
     public Player getPlayerById(Integer id) {
-        return null;
+        return playerRepository.findById(id).orElse(null);
     }
 
     @Override
     public void deletePlayer(Integer id) {
-
+        playerRepository.deleteById(id);
     }
 
     @Override

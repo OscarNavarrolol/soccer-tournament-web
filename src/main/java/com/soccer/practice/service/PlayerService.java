@@ -15,5 +15,6 @@ public interface PlayerService {
     public void deletePlayer (Integer id);
 
     public Player updatePlayer (Integer id,Player player);
+
     List<Player> getAllPlayersByTeam(Team team);
 }

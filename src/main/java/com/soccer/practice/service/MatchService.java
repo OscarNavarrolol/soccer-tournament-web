@@ -7,14 +7,14 @@ import java.util.List;
 
 public interface MatchService {
 
-    public List<Match> getAllProducts();
-    public Match saveProduct (Match match);
+    public List<Match> getAllMatch();
+    public Match saveMatch (Match match);
 
-    public Match getProductById(Integer id);
+    public Match getMatchById(Integer id);
 
-    public void deleteProduct(Integer id);
+    public void deleteMatch(Integer id);
 
-    public Match updateProduct(Integer id,Match match);
+    public Match updateMatch(Integer id,Match match);
 
     List<Match> getAllMatchesByTournament(Tournament tournament);
 }
